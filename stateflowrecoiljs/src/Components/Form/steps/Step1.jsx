@@ -16,6 +16,7 @@ const Step1 = () => {
         type="text"
         autoFocus
         placeholder="Enter your name"
+        required={true}
         onChange={(e) =>
           setForm({
             ...form,

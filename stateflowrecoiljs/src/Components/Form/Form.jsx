@@ -9,7 +9,7 @@ import Sucess from "./steps/Sucess";
 const Form = () => {
   const formStep = useRecoilValue(FormCurrentStepAtom);
   return (
-    <div className="Main Form">
+    <div className="register-form">
       {formStep === 1 ? (
         <Step1 />
       ) : formStep === 2 ? (

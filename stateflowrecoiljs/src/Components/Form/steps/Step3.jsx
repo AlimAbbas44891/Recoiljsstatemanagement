@@ -8,13 +8,15 @@ const Step3 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormStep(formStep + 1);
   };
   return (
     <form onSubmit={handleSubmit}>
       <input
-        type="text"
+        type="email"
         autoFocus
         placeholder="Enter valid email"
+        required={true}
         onChange={(e) =>
           setForm({
             ...form,
@@ -23,8 +25,8 @@ const Step3 = () => {
         }
         value={form.email}
       />
-      <button type="submit">Continue</button>
-      <button onClick={() => setFormStep(formStep - 1)}>Back</button>
+      <button type="submit">REGISTER</button>
+      <button onClick={() => setFormStep(formStep - 1)}>BACK</button>
     </form>
   );
 };

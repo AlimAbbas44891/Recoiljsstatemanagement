@@ -15,7 +15,7 @@ const Step2 = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        type="text"
+        type="number"
         autoFocus
         placeholder="Enter your mobile number (10 digits)"
         onChange={(e) =>
@@ -35,7 +35,7 @@ const Step2 = () => {
       >
         NEXT
       </button>
-      <button onClick={() => setFormStep(formStep - 1)}>Back</button>
+      <button onClick={() => setFormStep(formStep - 1)}>BACK</button>
     </form>
   );
 };

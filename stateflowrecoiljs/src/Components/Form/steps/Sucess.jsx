@@ -1,26 +1,24 @@
 import React from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { FormCurrentStepAtom, FormDataAtom } from "../../atoms/form";
 
 const Sucess = () => {
-  const [form, setForm] = useRecoilState(FormDataAtom);
-  const [formStep, setFormStep] = useRecoilState(FormCurrentStepAtom);
-
+  const formValue = useRecoilValue(FormDataAtom);
   return (
     <form>
       <div className="success-step">
-        <h3>Registration successful!</h3>
+        <h3>Registration successful!!</h3>
         <p>
           <span>Name:</span>
-          {form.name}
+          {formValue.name}
         </p>
         <p>
           <span>Mobile number:</span>
-          {form.mobileNumber}
+          {formValue.mobileNumber}
         </p>
         <p>
-          <span>Address:</span>
-          {form.email}
+          <span>Email:</span>
+          {formValue.email}
         </p>
       </div>
     </form>
